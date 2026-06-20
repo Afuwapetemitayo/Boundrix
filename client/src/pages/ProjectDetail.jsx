@@ -93,7 +93,6 @@ export default function ProjectDetail() {
   return (
     <div className="min-h-screen bg-gray-50">
 
-      {/* Navbar */}
       <nav className="bg-white border-b border-gray-100 px-8 py-4 flex justify-between items-center sticky top-0 z-50">
         <div className="flex items-center gap-3">
           <button
@@ -110,12 +109,12 @@ export default function ProjectDetail() {
           <div className="w-6 h-6 bg-purple-600 rounded-md flex items-center justify-center">
             <span className="text-white text-xs font-bold">S</span>
           </div>
-          <span className="font-bold text-gray-900 text-sm">ScopeGuard</span>
+          <span className="font-bold text-gray-900 text-sm">Boundra</span>
         </div>
       </nav>
 
       <div className="max-w-3xl mx-auto px-6 py-10"></div>
-      {/* Project header */}
+    
       {project && (
           <div className="mb-10 reveal">
             <h1 className="text-3xl font-extrabold text-gray-900">{project.name}</h1>
@@ -123,7 +122,6 @@ export default function ProjectDetail() {
           </div>
         )}
 
-        {/* SOW Upload */}
         {!project?.sowSummary && (
           <div className="bg-white border border-gray-200 rounded-2xl p-8 mb-6 reveal">
             <div className="flex items-center gap-3 mb-2">
@@ -132,7 +130,7 @@ export default function ProjectDetail() {
               </div>
               <div>
                 <h3 className="font-bold text-gray-900">Upload Statement of Work</h3>
-                <p className="text-gray-400 text-xs">Paste your SOW and ScopeGuard will read every term</p>
+                <p className="text-gray-400 text-xs">Paste your SOW and Boundra will read every term</p>
               </div>
             </div>
             <textarea
@@ -151,18 +149,16 @@ export default function ProjectDetail() {
           </div>
         )}
 
-        {/* SOW already uploaded */}
         {project?.sowSummary && (
           <div className="bg-purple-50 border border-purple-100 rounded-2xl px-6 py-4 mb-6 flex items-center gap-3 reveal">
             <CheckCircle size={18} className="text-purple-500 shrink-0" />
             <div>
               <p className="text-purple-700 font-semibold text-sm">SOW uploaded and parsed</p>
-              <p className="text-purple-400 text-xs">ScopeGuard knows your agreement — paste a client message below</p>
+              <p className="text-purple-400 text-xs">Boundra knows your agreement — paste a client message below</p>
             </div>
           </div>
         )}
 
-        {/* Message Analyser */}
         {project?.sowSummary && (
           <div className="bg-white border border-gray-200 rounded-2xl p-8 mb-6 reveal">
             <div className="flex items-center gap-3 mb-4">
@@ -189,7 +185,6 @@ export default function ProjectDetail() {
               {loading ? 'Analysing...' : 'Analyse Message →'}
             </button>
 
-            {/* Result */}
             {result && (
               <div className={'mt-6 rounded-2xl p-5 border ' + verdictConfig(result.verdict).bg + ' ' + verdictConfig(result.verdict).border}>
                 <div className="flex items-center gap-2 mb-3">
@@ -215,7 +210,6 @@ export default function ProjectDetail() {
             </div>
         )}
 
-        {/* History */}
         {history.length > 0 && (
           <div className="bg-white border border-gray-200 rounded-2xl p-8 reveal">
             <div className="flex items-center gap-3 mb-6">

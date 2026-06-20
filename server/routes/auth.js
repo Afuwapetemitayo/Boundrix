@@ -29,7 +29,7 @@ router.post('/signup', async (req, res) => {
 
     const token = jwt.sign(
       { id: newUser.id, email: newUser.email },
-      process.env.JWT_SECRET || 'scopeguard_secret',
+      process.env.JWT_SECRET || 'Boundra_secret',
       { expiresIn: '7d' }
     )
 
@@ -59,7 +59,7 @@ router.post('/login', async (req, res) => {
 
     const token = jwt.sign(
       { id: user.id, email: user.email },
-      process.env.JWT_SECRET || 'scopeguard_secret',
+      process.env.JWT_SECRET || 'Boundra_secret',
       { expiresIn: '7d' }
     )
 

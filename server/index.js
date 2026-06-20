@@ -13,7 +13,7 @@ app.use(cors())
 app.use(express.json())
 
 app.get('/', (req, res) => {
-  res.json({ message: 'ScopeGuard server is running' })
+  res.json({ message: 'Boundra server is running' })
 })
 
 app.use('/api/auth', authRoutes)
